@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "8897e92b-6825-485c-bb1d-ad7d93b3be20",
+		"name": "springsecurity-customdatastore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Users",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "sunny",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Sunny",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8002/userManagement/v1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"userManagement",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" : \"Sunny\",\n\t\"role\" : \"ADMIN\",\n\t\"email\" : \"abc@xyz.com\",\n\t\"password\" : \"sunny\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8002/userManagement/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"userManagement",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find By UserName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8002/userManagement/v1/userName/Kiara",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"userManagement",
+						"v1",
+						"userName",
+						"Kiara"
+					]
+				},
+				"description": "User can see only his/her details"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

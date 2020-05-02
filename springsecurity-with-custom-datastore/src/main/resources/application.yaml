@@ -1,0 +1,19 @@
+app:
+  version: @project.version@
+  name: @project.name@
+  description: @project.description@
+  ownerName: Sunny Srivastava
+
+---
+spring:
+  profiles: default
+server:
+  port: 8002
+
+---
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: users-data
