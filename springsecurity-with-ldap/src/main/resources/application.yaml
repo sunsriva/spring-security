@@ -1,0 +1,19 @@
+app:
+  version: @project.version@
+  name: @project.name@
+  description: @project.description@
+  ownerName: Sunny Srivastava
+
+---
+spring:
+  profiles: default
+server:
+  port: 8003
+
+---
+spring:
+  ldap:
+    embedded:
+      ldif: classpath:test-server.ldif
+      base-dn: dc=springframework,dc=org
+      port: 8389
