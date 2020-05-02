@@ -1,0 +1,27 @@
+app:
+  version: @project.version@
+  name: @project.name@
+  description: @project.description@
+  ownerName: Sunny Srivastava
+
+---
+spring:
+  profiles: default
+server:
+  port: 8003
+
+---
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/jdbc-users
+    username: postgres
+    password: root
+
+---
+spring:
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+  datasource:
+    initialization-mode: always
