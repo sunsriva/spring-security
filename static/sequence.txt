@@ -1,0 +1,9 @@
+@startuml
+actor User
+participant AuthenticationMangerBuilder
+AuthenticationMangerBuilder -> User: What type of authentication you want
+User -> AuthenticationMangerBuilder: provide me In memory authentication
+AuthenticationMangerBuilder -> User : Ok, tell me the username and pwd and role
+User -> AuthenticationMangerBuilder: provide the <user info>
+AuthenticationMangerBuilder -> AuthenticationMangerBuilder: creates new AuthenticationManger with the authentication object
+@enduml
